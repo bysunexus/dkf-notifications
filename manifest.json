@@ -1,0 +1,27 @@
+{
+  "name": "微信多客服消息通知",
+  "version": "0.0.1",
+  "description": "微信多客服网页版消息通知",
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "64": "64.png",
+    "128": "128.png"
+  },
+  "permissions": [
+    "notifications",
+    "*://mpkf.weixin.qq.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://mpkf.weixin.qq.com/*"],
+      "css": [],
+      "js": ["jquery-2.2.2.min.js", "dkf.js"]
+    }
+  ],
+  "background": { "scripts": ["background.js"] },
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "48.png"
+  ]
+}
